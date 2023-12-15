@@ -1,4 +1,4 @@
-defaultStorageMapping: DEMOLABWORKSPACESTORAGELOCATION
+defaultStorageMapping: SRC
 installedPackages: {}
 jobs:
   Job-2:
@@ -8,7 +8,17 @@ jobs:
     name: New Job
     steps: []
     subgraphs: []
-locations: {}
+locations:
+  SRC:
+    mappingDefinitions:
+      "11":
+        database: SNOWFLAKE_SAMPLE_DATA
+        schema: TPCH_SF1
+  TARGET:
+    mappingDefinitions:
+      "11":
+        database: CHOUDHURI
+        schema: WORKTEST
 macros: {}
 packages: {}
 projects: {}
